@@ -152,7 +152,7 @@ export default function Home() {
         <h1 className="text-center text-3xl mt-8 dark:text-white">About Me</h1>
           <div>
             <div className="text-center">
-              <h1 className="dark:text-white">My name is Carlos Pantin, born and raised in MEXICO, I am currently a 3th yaer student over at HAMK university of applied science in Finland. Since the year of 2020, I started studying the degree programme of Computer Applications and ever since that journey began, I've been developing a lot of taste and passion towards develeloping. As of recently, I've been very eager and excited to increase my professional portfolio and experience by seeking for Junior or trainee positions at a tech company.</h1>
+              <h1 className="dark:text-white">My name is Carlos Pantin, born and raised in MEXICO, I am currently a 3th year student over at HAMK university of applied science in Finland. Since the year of 2020, I started studying the degree programme of Computer Applications and ever since that journey began, I've been developing a lot of taste and passion towards develeloping. As of recently, I've been very eager and excited to increase my professional portfolio and experience by seeking for Junior or trainee positions at a tech company.</h1>
             </div>
           </div>
           <div className="flex justify-center gap-10">
@@ -162,9 +162,7 @@ export default function Home() {
                 </div>
                 
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">My Strengths</h3>
-                <p className="py-2 dark:text-white">
-                  I have developed several web applications both for study purposes and several personal projects I did to practice my skills both front-end and back-end
-                </p>
+                
                 <p className="text-gray-800 py-1 dark:text-white">Fast Learner</p>
                 <p className="text-gray-800 py-1 dark:text-white">Focused</p>
                 <p className="text-gray-800 py-1 dark:text-white">Easy to Work With</p>
