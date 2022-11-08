@@ -4,9 +4,9 @@ import {AiFillLinkedin} from 'react-icons/ai'
 import {FiArrowRight,FiArrowLeft} from "react-icons/fi";
 import Image from "next/image";
 import mypicture from "../public/MyPicture.png";
-import design from '../public/design.png';
-import consulting from '../public/consulting.png';
-import code from '../public/code.png';
+import webdesign from '../public/webdesign.png';
+import datascience from '../public/datascience.png';
+import webapplication from '../public/webapp.png';
 import strength from '../public/strength.png'
 import React from "react";
 
@@ -110,7 +110,7 @@ export default function Home() {
             <div className="lg:flex gap-10">
               <div className="text-center shadow-lg p-10 rounded-xl my-10">
                 <div style={{display: "flex",justifyContent: "center",}}>
-                <Image src={design} width={100} height={100}/>
+                <Image src={webdesign} width={100} height={100}/>
                 </div>
                 
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Web Design</h3>
@@ -125,7 +125,7 @@ export default function Home() {
               </div>
               <div className="text-center shadow-lg p-10 rounded-xl my-10">
                 <div style={{display: "flex",justifyContent: "center",}}>
-                <Image src={code} width={100} height={100}/>
+                <Image src={webapplication} width={100} height={100}/>
                 </div>
                 
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Web Applications</h3>
@@ -142,7 +142,7 @@ export default function Home() {
               </div>
               <div className="text-center shadow-lg p-10 rounded-xl my-10">
                 <div style={{display: "flex",justifyContent: "center",}}>
-                <Image src={consulting} width={100} height={100}/>
+                <Image src={datascience} width={100} height={100}/>
                 </div>
                 
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Data Science</h3>
@@ -209,6 +209,12 @@ export default function Home() {
     </div>
   );
 }
+
+  
+
+  
+
+
 
   
 
