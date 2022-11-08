@@ -1,4 +1,4 @@
-\import Head from 'next/head'
+import Head from 'next/head'
 import {BsFillMoonStarsFill} from 'react-icons/bs'
 import {AiFillLinkedin} from 'react-icons/ai'
 import {FiArrowRight,FiArrowLeft} from "react-icons/fi";
