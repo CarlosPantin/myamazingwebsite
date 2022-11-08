@@ -1,19 +1,45 @@
-import Head from 'next/head'
+\import Head from 'next/head'
 import {BsFillMoonStarsFill} from 'react-icons/bs'
 import {AiFillLinkedin} from 'react-icons/ai'
 import {FiArrowRight,FiArrowLeft} from "react-icons/fi";
 import Image from "next/image";
-import deved from "../public/MyPicture.png";
+import mypicture from "../public/MyPicture.png";
 import design from '../public/design.png';
 import consulting from '../public/consulting.png';
 import code from '../public/code.png';
 import strength from '../public/strength.png'
+import React from "react";
 
 import webapp from '../public/WebAppScandi.png';
 import { useState } from "react";
 
 
+
+
 export default function Home() {
+  
+  
+  
+   
+    const onButtonClick = () => {
+        fetch('CarlosPantin_CV.pdf').then(response => {
+            response.blob().then(blob => {
+                const fileURL = window.URL.createObjectURL(blob);
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'CarlosPantin_CV.pdf';
+                alink.click();
+            })
+        })
+    }
+    
+    
+    
+
+           
+        
+    
+
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -35,12 +61,18 @@ export default function Home() {
                   className=" cursor-pointer text-2xl"
                 />
               </li>
-              <li>
-                <a className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
-                  href="../public/CarlosPantin_CV.pdf" download = "CarlosPantin_CV.pdf">
-                  Resume
-                </a>
-              </li>
+              
+              <>
+    
+    <li>
+        <button className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8" onClick={onButtonClick}>
+          Download Resume
+        </button>
+      </li>
+</>
+              
+
+              
             </ul>
           </nav>
           <div className="text-center p-10 py-10">
@@ -58,8 +90,8 @@ export default function Home() {
               <a href="https://linkedin.com/in/carlospantinp"><AiFillLinkedin /></a>
               <a href=""><FiArrowLeft /></a>
             </div>
-            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-50 h-50 relative overflow-hidden mt-20 md:h-96 md:w-96">
-              <Image src={deved} layout="fill" objectFit="cover" />
+            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full  relative overflow-hidden mt-20  sm:h-20 sm:w-20 md:h-96 md:w-96">
+              <Image src={mypicture} layout="fill" objectFit="cover" />
             </div>
           </div>
         </section>
@@ -150,7 +182,7 @@ export default function Home() {
         <h1 className="text-center text-3xl mt-8 dark:text-white">About Me</h1>
           <div>
             <div className="text-center">
-              <h1 className="dark:text-white">My name is Carlos Pantin, born and raised in MEXICO, I am currently a 3th year student over at HAMK university of applied science in Finland. Since the year of 2020, I started studying the degree programme of Computer Applications and ever since that journey began, I've been developing a lot of taste and passion towards develeloping. As of recently, I've been very eager and excited to increase my professional portfolio and experience by seeking for Junior or trainee positions at a tech company.</h1>
+              <h1 className="dark:text-white">My name is Carlos Pantin, born and raised in MEXICO, I am currently a 3th yaer student over at HAMK university of applied science in Finland. Since the year of 2020, I started studying the degree programme of Computer Applications and ever since that journey began, I've been developing a lot of taste and passion towards develeloping. As of recently, I've been very eager and excited to increase my professional portfolio and experience by seeking for Junior or trainee positions at a tech company.</h1>
             </div>
           </div>
           <div className="flex justify-center gap-10">
@@ -160,7 +192,9 @@ export default function Home() {
                 </div>
                 
                 <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">My Strengths</h3>
-                
+                <p className="py-2 dark:text-white">
+                  I have developed several web applications both for study purposes and several personal projects I did to practice my skills both front-end and back-end
+                </p>
                 <p className="text-gray-800 py-1 dark:text-white">Fast Learner</p>
                 <p className="text-gray-800 py-1 dark:text-white">Focused</p>
                 <p className="text-gray-800 py-1 dark:text-white">Easy to Work With</p>
@@ -176,4 +210,6 @@ export default function Home() {
   );
 }
 
+  
 
+  
